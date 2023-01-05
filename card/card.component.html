@@ -1,0 +1,129 @@
+<ActionBar #cardActionBar title="Card">
+	<ActionItem #toSave (tap)="onSave()" ios.systemIcon="3" ios.position="left" android.systemIcon="ic_menu_save" android.position="actionBar">
+	</ActionItem>
+    <ActionItem #toEdit (tap)="onEdit()" ios.systemIcon="2" ios.position="right" android.systemIcon="ic_menu_edit" android.position="actionBar">
+    </ActionItem>
+    <ActionItem #toAddHistory (tap)="onAddHistory()" ios.systemIcon="4" ios.position="right" 
+      android.systemIcon="ic_menu_gallery" android.position="actionBar">
+    </ActionItem>
+    <ActionItem #toDelete (tap)="onDelete()" ios.systemIcon="5" ios.position="right" 
+      android.systemIcon="ic_menu_delete" android.position="actionBar">
+    </ActionItem>
+    <ActionItem #toCancel (tap)="onCancel()" ios.systemIcon="1" ios.position="right" 
+      android.systemIcon="ic_menu_close_clear_cancel" android.position="actionBar">
+    </ActionItem>
+
+    <!-- popup list to select card status and phone, by selection, it will fill the responding field with string -->
+    <ActionItem (tap)="cardStatus_registered()"
+      text="registered" android.position="popup"></ActionItem>
+    <ActionItem (tap)="cardStatus_ready()"
+      text="ready" android.position="popup"></ActionItem>
+    <ActionItem (tap)="cardStatus_done()"
+      text="done" android.position="popup"></ActionItem>
+    <ActionItem (tap)="cardStatus_remove()"
+      text="remove" android.position="popup"></ActionItem>
+    <ActionItem text="----------" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_none()"
+      text="none" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_oldest()"
+      text="oldest" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_middle()"
+      text="middle" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_newest()"
+      text="newest" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_S8()"
+      text="S8" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_iPhone6()"
+      text="iPhone6" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_iPhone7()"
+      text="iPhone7" android.position="popup"></ActionItem>
+    <ActionItem (tap)="phone_nubia()"
+      text="nubia" android.position="popup"></ActionItem>
+
+</ActionBar>
+
+<ScrollView row="1" orientation="vertical">
+
+	<GridLayout rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" columns="*,*,*,*">
+		<TextField #inputDate hint="Input Date" keyboardType="datetime" autocorrect="false" autocapitalizationType="none" row="0" col="0" rowSpan="1"
+         colSpan="2" (textChange)="onTextChangeOfInputDate(1)"></TextField>
+		<TextField #validDate hint="Valid Date" keyboardType="datetime" autocorrect="false" autocapitalizationType="none" row="0" col="2" rowSpan="1"
+		 colSpan="2"></TextField>
+		<TextField #card1 hint="Card1" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="1" col="0" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(2)"></TextField>
+		<TextField #card2 hint="Card2" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="1" col="1" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(3)"></TextField>
+		<TextField #card3 hint="Card3" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="1" col="2" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(4)"></TextField>
+		<TextField #card4 hint="Card4" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="1" col="3" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(5)"></TextField>
+		<TextField #expireYear hint="Year" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="2" col="0" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(6)"></TextField>
+		<TextField #expireMonth hint="Month" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="2" col="1" rowSpan="1"
+		 colSpan="1" (textChange)="onTextChangeOfInputDate(7)"></TextField>
+		<TextField #cvc hint="CVC" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="2" col="2" rowSpan="1"
+         colSpan="1" (textChange)="onTextChangeOfInputDate(8)"></TextField>
+    <Label #status text="registered" row="2" col="3" rowSpan="1" colSpan="1"></Label>
+		<TextField #name hint="Name" autocorrect="false" autocapitalizationType="none" row="3" col="0" rowSpan="1" colSpan="4"></TextField>
+		<TextField #birthday hint="Birthday" keyboardType="datetime" autocorrect="false" autocapitalizationType="none" row="4" col="0" rowSpan="1"
+		 colSpan="2" (textChange)="onTextChangeOfInputDate(9)"></TextField>
+		<TextField #creditLimit hint="Credit Limit" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="4" col="2" rowSpan="1"
+		 colSpan="2"></TextField>
+		<TextField #address1 hint="Address1" autocorrect="false" autocapitalizationType="none" row="5" col="0" rowSpan="1" colSpan="4"></TextField>
+		<TextField #address2 hint="Address2" autocorrect="false" autocapitalizationType="none" row="6" col="0" rowSpan="1" colSpan="4"></TextField>
+		<TextField #city hint="City" autocorrect="false" autocapitalizationType="none" row="7" col="0" rowSpan="1" colSpan="2"></TextField>
+		<TextField #province hint="Province" autocorrect="false" autocapitalizationType="none" row="7" col="2" rowSpan="1" colSpan="1"></TextField>
+		<TextField #postCode hint="Post Code" autocorrect="false" autocapitalizationType="none" row="7" col="3" rowSpan="1" colSpan="1"></TextField>
+		<TextField #billDay hint="Bill Day" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="8" col="0" rowSpan="1"
+		 colSpan="2" (textChange)="onTextChangeOfInputDate(10)"></TextField>
+		<TextField #billDue hint="Bill Due" keyboardType="number" autocorrect="false" autocapitalizationType="none" row="8" col="2" rowSpan="1"
+		 colSpan="2" (textChange)="onTextChangeOfInputDate(11)"></TextField>
+		<Label text="  isShared" row="9" col="0" rowSpan="1" colSpan="1"></Label>
+        <Switch #isShared checked="false" row="9" col="1" rowSpan="1" colSpan="1"></Switch>
+        <Label text="  isAutoPay" row="9" col="2" rowSpan="1" colSpan="1"></Label>
+        <Switch #isAutoPay checked="false" row="9" col="3" rowSpan="1" colSpan="1"></Switch>
+        <Label text="  isUSD" row="10" col="0" rowSpan="1" colSpan="1"></Label>
+        <Switch #isUSD checked="false" row="10" col="1" rowSpan="1" colSpan="1"></Switch>
+        <Label text="  isLongTerm" row="10" col="2" rowSpan="1" colSpan="1"></Label>
+        <Switch #isLongTerm checked="false" row="10" col="3" rowSpan="1" colSpan="1"></Switch>
+        <TextField #email hint="Email" keyboardType="email" autocorrect="false"
+            autocapitalizationType="none" row="11" col="0" rowSpan="1"
+            colSpan="4"></TextField>
+        <TextField #homePhone hint="Home Phone" keyboardType="phone" autocorrect="false"
+            autocapitalizationType="none" row="12" col="0" rowSpan="1"
+            colSpan="2" (textChange)="onTextChangeOfInputDate(12)"></TextField>
+        <TextField #mobilePhone hint="Mobile Phone" keyboardType="phone" autocorrect="false"
+            autocapitalizationType="none" row="12" col="2" rowSpan="1"
+            colSpan="2"></TextField>
+        <TextField #businessPhone hint="Business Phone" keyboardType="phone" autocorrect="false"
+            autocapitalizationType="none" row="13" col="0" rowSpan="1"
+            colSpan="2"></TextField>
+        <TextField #otherPhone hint="Other Phone" keyboardType="phone" autocorrect="false"
+            autocapitalizationType="none" row="13" col="2" rowSpan="1"
+            colSpan="2"></TextField>
+        <TextField #password hint="Password" autocorrect="false" autocapitalizationType="none"
+            row="14" col="0" rowSpan="1" colSpan="1"></TextField>
+        <TextField #challenge1 hint="Challenge1" autocorrect="false"
+            autocapitalizationType="none" row="14" col="1" rowSpan="1"
+            colSpan="1"></TextField>
+        <TextField #challenge2 hint="Challenge2" autocorrect="false"
+            autocapitalizationType="none" row="14" col="2" rowSpan="1"
+            colSpan="1"></TextField>
+        <TextField #challenge3 hint="Challenge3" autocorrect="false"
+            autocapitalizationType="none" row="14" col="3" rowSpan="1"
+            colSpan="1"></TextField>
+        <TextField #notes hint="Notes" autocorrect="false" autocapitalizationType="none"
+            row="15" col="0" rowSpan="1" colSpan="3"></TextField>
+        <TextField #readyDate hint="Ready Date" autocorrect="false"
+            autocapitalizationType="none" row="16" col="0" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfInputDate(13)"></TextField>
+        <Label #phone text="none" row="16" col="2" rowSpan="1" colSpan="1"></Label>
+        <Label #amount text="0" row="16" col="3" rowSpan="1" colSpan="1"></Label>
+        
+        
+            <!-- use ActionItem instead
+        <Button text="Save" row="16" col="0" rowSpan="1" colSpan="2"></Button>
+        <Button text="Cancel" row="16" col="2" rowSpan="1" colSpan="2"></Button>
+        -->
+    </GridLayout>
+</ScrollView>

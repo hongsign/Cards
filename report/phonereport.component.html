@@ -1,0 +1,32 @@
+<ActionBar title="Phone Report">
+        <ActionItem (tap)="onRefresh()" ios.systemIcon="5" ios.position="right"
+            android.systemIcon="ic_menu_rotate" android.position="actionBar">
+        </ActionItem>
+        <ActionItem (tap)="onHelp()" ios.systemIcon="9" ios.position="right"
+            android.systemIcon="ic_menu_help" android.position="actionBar">
+        </ActionItem>
+        <ActionItem (tap)="onClose()" ios.systemIcon="4" ios.position="left"
+            android.systemIcon="ic_menu_close_clear_cancel" android.position="actionBar">
+        </ActionItem>
+</ActionBar>
+
+<ScrollView>
+    <GridLayout rows = "*,*,*,*" columns="*,*,*,*" borderWidth="2" >
+        <Label text="oldest" row="0" col="0"></Label>
+        <Label #oldest text="" row="1" col="0" colSpan="1"></Label>
+        <Label text="middle" row="0" col="1"></Label>
+        <Label #middle text="" row="1" col="1" colSpan="1"></Label>
+        <Label text="newest" row="0" col="2"></Label>
+        <Label #newest text="" row="1" col="2" colSpan="1"></Label>
+        <Label text="s8" row="0" col="3"></Label>
+        <Label #s8 text="" row="1" col="3" colSpan="1"></Label>
+        <Label text="iphone6" row="2" col="0"></Label>
+        <Label #iphone6 text="" row="3" col="0" colSpan="1"></Label>
+        <Label text="iphone7" row="2" col="1"></Label>
+        <Label #iphone7 text="" row="3" col="1" colSpan="1"></Label>
+        <Label text="nubia" row="2" col="2"></Label>
+        <Label #nubia text="" row="3" col="2" colSpan="1"></Label>
+        <Label text="total" row="2" col="3"></Label>
+        <Label #total text="" row="3" col="3" colSpan="1"></Label>
+    </GridLayout>
+</ScrollView>

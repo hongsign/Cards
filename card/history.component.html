@@ -1,0 +1,189 @@
+<ActionBar #cardActionBar title="History">
+    <ActionItem #toSave (tap)="onSave()" ios.systemIcon="3" ios.position="left" 
+        android.systemIcon="ic_menu_save" android.position="actionBar">
+    </ActionItem>
+    <ActionItem #toCancel (tap)="onCancel()" ios.systemIcon="1" ios.position="right" 
+        android.systemIcon="ic_menu_close_clear_cancel" android.position="actionBar">
+    </ActionItem>
+</ActionBar>
+
+<ScrollView row="1" orientation="vertical">
+    <GridLayout rows="*,*,*,*,*,*,*,*,*,*,*" columns="*,*,*,*" borderWidth="1">
+        <TextField #date1 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="0" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(1)">
+        </TextField>
+        <TextField #amount1 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="0" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(1)">
+        </TextField>
+        <TextField #notes1 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="0" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(1)">
+        </TextField>
+
+        <TextField #date2 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="1" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(2)">
+        </TextField>
+        <TextField #amount2 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="1" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(2)">
+        </TextField>
+        <TextField #notes2 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="1" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(2)">
+        </TextField>
+
+        <TextField #date3 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="2" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(3)">
+        </TextField>
+        <TextField #amount3 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="2" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(3)">
+        </TextField>
+        <TextField #notes3 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="2" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(3)">
+        </TextField>
+
+        <TextField #date4 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="3" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(4)">
+        </TextField>
+        <TextField #amount4 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="3" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(4)">
+        </TextField>
+        <TextField #notes4 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="3" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(4)">
+        </TextField>
+
+        <TextField #date5 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="4" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(5)">
+        </TextField>
+        <TextField #amount5 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="4" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(5)">
+        </TextField>
+        <TextField #notes5 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="4" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(5)">
+        </TextField>
+
+        <TextField #date6 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="5" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(6)">
+        </TextField>
+        <TextField #amount6 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="5" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(6)">
+        </TextField>
+        <TextField #notes6 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="5" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(6)">
+        </TextField>
+
+        <TextField #date7 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="6" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(7)">
+        </TextField>
+        <TextField #amount7 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="6" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(7)">
+        </TextField>
+        <TextField #notes7 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="6" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(7)">
+        </TextField>
+
+        <TextField #date8 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="7" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(8)">
+        </TextField>
+        <TextField #amount8 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="7" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(8)">
+        </TextField>
+        <TextField #notes8 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="7" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(8)">
+        </TextField>
+
+        <TextField #date9 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="8" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(9)">
+        </TextField>
+        <TextField #amount9 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="8" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(9)">
+        </TextField>
+        <TextField #notes9 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="8" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(9)">
+        </TextField>
+
+        <TextField #date10 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="9" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(10)">
+        </TextField>
+        <TextField #amount10 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="9" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(10)">
+        </TextField>
+        <TextField #notes10 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="9" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(10)">
+        </TextField>
+
+        <TextField #date11 hint="Date" keyboardType="datetime" 
+            autocorrect="false" autocapitalizationType="none" 
+            row="10" col="0" rowSpan="1" colSpan="1" 
+            (textChange)="onTextChangeOfDate(11)">
+        </TextField>
+        <TextField #amount11 hint="Amount" keyboardType="number"
+            autocorrect="false" autocapitalizationType="none"
+            row="10" col="1" rowSpan="1" colSpan="1"
+            (textChange)="onTextChangeOfAmount(11)">
+        </TextField>
+        <TextField #notes11 hint="Notes"
+            autocorrect="false" autocapitalizationType="none"
+            row="10" col="2" rowSpan="1" colSpan="2"
+            (textChange)="onTextChangeOfNotes(11)">
+        </TextField>
+        
+    </GridLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+<ActionBar title="Cards">
+    <TextField #search hint="    search    " autocorrect="false"
+    autocapitalizationType="none"></TextField>
+    <ActionItem (tap)="onSearch()" ios.systemIcon="4" ios.position="left"
+        android.systemIcon="ic_menu_search" android.position="actionBar">
+    </ActionItem>
+    <ActionItem (tap)="onAdd()" ios.systemIcon="4" ios.position="left"
+        android.systemIcon="ic_menu_add" android.position="actionBar">
+    </ActionItem>
+    <ActionItem (tap)="onReport()" ios.systemIcon="9" ios.position="right"
+        android.systemIcon="ic_menu_compass" android.position="actionBar">
+    </ActionItem>
+    <ActionItem (tap)="onPhoneReport()" ios.systemIcon="6" ios.position="right"
+        android.systemIcon="ic_menu_call" android.position="actionBar">
+    </ActionItem>
+</ActionBar>
+
+<ScrollView row="1" orientation="vertical">
+    
+        <ListView [items]="cards.viewCards" class="list-group">
+            <ng-template let-card="item">
+                <StackLayout>
+                <GridLayout rows="*,*,*" columns="*,*,*,*" class="list-group-item"
+                    borderWidth="2" (tap)="onItemTap(card)">
+                    <Label [text]="card.validDate" row="0" col="0" colSpan="1"></Label>
+                    <Label [text]="card.name" row="0" col="1" colSpan="2"></Label>
+                    <Label [text]="card.city" row="0" col="3" colSpan="1"></Label>
+                    <Label [text]="card.cardNumber" row="1" col="0" colSpan="2"></Label>
+                    <Label [text]="card.validTill" row="1" col="2" colSpan="1"></Label>
+                    <Label [text]="card.cvc" row="1" col="3" colSpan="1"></Label>
+                    <Label [text]="card.homePhone" row="2" col="0" colSpan="2"></Label>
+                    <Label [text]="card.password" row="2" col="2" colSpan="1"></Label>
+                    <Label [text]="card.isLongTerm" row="2" col="3" colSpan="1"></Label>
+                </GridLayout>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+    
+</ScrollView>

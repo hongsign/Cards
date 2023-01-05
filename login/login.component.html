@@ -1,0 +1,32 @@
+@import "~nativescript-theme-core/css/core.light.css";
+
+<FlexboxLayout>
+    <StackLayout class="form">
+        <GridLayout rows="*,*,*,*" columns="*,*,*,*,*,*">
+            <Image src="~/images/rion_icon.png" row="0" col="2" rowSpan="2" colSpan="2" stretch="fill"></Image>
+            <TextField #code1 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="0" colSpan="1" 
+                (textChange)="onTextChange($event,1)" secure="true"></TextField>
+            <TextField #code2 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="1" colSpan="1" 
+                (textChange)="onTextChange($event, 2)" secure="true"></TextField>
+            <TextField #code3 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="2" colSpan="1" 
+                (textChange)="onTextChange($event, 3)" secure="true"></TextField>
+            <TextField #code4 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="3" colSpan="1" 
+                (textChange)="onTextChange($event, 4)" secure="true"></TextField>
+            <TextField #code5 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="4" colSpan="1" 
+                (textChange)="onTextChange($event, 5)" secure="true"></TextField>
+            <TextField #code6 keyboardType="number"autocorrect="false" autocapitalizationType="none"
+                row="2", col="5" colSpan="1" 
+                (textChange)="onTextChange($event, 6)" secure="true"></TextField>
+            <Label text="" row="3" col="0" colSpan="6"></Label>
+            <Button #login text="Sign in" class="btn btn-primary" textAttributes="Bold" (tap)="onLoginTap()"
+                row="4", col="1" colSpan="4"></Button>
+        </GridLayout>
+    </StackLayout>
+</FlexboxLayout>
+
+  

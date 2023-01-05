@@ -1,0 +1,39 @@
+<ActionBar title="Report">
+    <ActionItem (tap)="onRefresh()" ios.systemIcon="5" ios.position="right"
+        android.systemIcon="ic_menu_rotate" android.position="actionBar">
+    </ActionItem>
+    <ActionItem (tap)="onHelp()" ios.systemIcon="9" ios.position="right"
+        android.systemIcon="ic_menu_help" android.position="actionBar">
+    </ActionItem>
+    <ActionItem (tap)="onClose()" ios.systemIcon="4" ios.position="left"
+        android.systemIcon="ic_menu_close_clear_cancel" android.position="actionBar">
+    </ActionItem>
+</ActionBar>
+
+<ScrollView row="2" orientation="vertical">  
+        <ListView [items]="displayReports" class="list-group" rowIndex="0">
+            <ng-template let-report="item">
+                <StackLayout>
+                <GridLayout rows = "*,*,*,*" columns="*,*,*,*" class="list-group-item"
+                    borderWidth="1" (tap)="onItemTap(report)">
+                    <Label text="Year" row="0" col="0"></Label>
+                    <Label [text]="report.year" row="1" col="0" colSpan="1"></Label>
+                    <Label text="Month" row="0" col="1"></Label>
+                    <Label [text]="report.month" row="1" col="1" colSpan="1"></Label>
+                    <Label text="Total" row="0" col="2"></Label>
+                    <Label [text]="report.total" row="1" col="2" colSpan="1"></Label>
+                    <Label text="Spent" row="0" col="3"></Label>
+                    <Label [text]="report.spent" row="1" col="3" colSpan="1"></Label>
+                    <Label text="Registered" row="2" col="0"></Label>
+                    <Label [text]="report.registered" row="3" col="0" colSpan="1"></Label>
+                    <Label text="Done" row="2" col="1"></Label>
+                    <Label [text]="report.done" row="3" col="1" colSpan="1"></Label>
+                    <Label text="Ready" row="2" col="2"></Label>
+                    <Label [text]="report.ready" row="3" col="2" colSpan="1"></Label>
+                    <Label text="Remove" row="2" col="3"></Label>
+                    <Label [text]="report.remove" row="3" col="3" colSpan="1"></Label>
+                </GridLayout>
+                </StackLayout>
+            </ng-template>
+        </ListView>
+</ScrollView>
